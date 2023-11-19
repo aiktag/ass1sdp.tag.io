@@ -112,6 +112,8 @@ The provided code illustrates the Adapter design pattern, allowing the WowPlayer
 - `GameAdapt(String side)`
 - `play(String side, String team)`
 
+![adapter](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/AdapterUML.png)
+
 ### 2) Observer Design Pattern
 ```java
 import java.util.List;
@@ -197,6 +199,8 @@ This code implements the Observer design pattern, allowing objects of the Observ
 #### Patch Factory (Client Code)
 - `createPatchWithInitialVacancies(initialVacancies: String...)`
 
+![observer](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/ObserverUML.png)
+
 ### 3) Decorator Design Pattern 
 ```java
 interface Hero {
@@ -254,6 +258,8 @@ This Java code implements the Decorator design pattern for a Hero interface and 
 #### ArmorDecorator and CloakDecorator classes (Concrete Decorator Classes)
 - `equip()`
 
+![decorator](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/DecoratorUML.png)
+
 ### 4) Command Design Pattern
 ```java
 interface Command {
@@ -303,6 +309,8 @@ Code defines a Command interface with an execute method, and then provides two i
 - `setCommand(command: Command)`
 - `processInput()`
 
+![command](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/CommandUML.png)
+
 ### 5) Singleton Design Pattern
 ```java
 public class PaymentManager {
@@ -329,6 +337,8 @@ The provided Java code represents a Singleton pattern for a PaymentManager class
 - `instance:`
 - `getInstance()`
 - `processPayment(amount: double)`
+
+![singleton](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/SingletonUML.png)
 
 ### 6) Factory Design Pattern 
 ```java
@@ -367,6 +377,8 @@ The provided Java code implements a simple Factory Method pattern for creating i
 - `createPatch(patchNumber: int)`
 #### Patch1 and Patch2 classes (Concrete classes)
 - `applyPatch()`
+
+![factory](https://github.com/aiktag/ass1sdp.tag.io/blob/main/UML/FactoryUML.png)
 
 ### 7) Command Line Interface to execute
 ```java
@@ -587,3 +599,34 @@ public class GameCLI {
 }
 ```
 The code represents a simple text-based game command-line interface (CLI).
+### Conclusion:
+The project is a text-based command-line interface (CLI) implementation of a WoW game.
+It allows users to play the game, observe game patches, equip heroes, apply game patches, process payments, and execute various commands.
+### Design Patterns:
+#### Adapter Pattern:
+- `Utilized the Adapter pattern to adapt the WowPlayer class to the GameAdapt class, enabling compatibility with different sides (neutral, dire).`
+- `GameAdapt acts as an adapter, adapting the WowPlayer class to the Wowcataclysm interface.`
+#### Observer Pattern:
+- `Implemented the Observer pattern for observing game patches.`
+- `The GamePatch class serves as the subject, and the Subscriber class acts as the observer.`
+- `Subscribers are notified when game patches are added or removed.`
+#### Decorator Pattern:
+- `Applied the Decorator pattern for equipping heroes with different enhancements.`
+- `Hero is the base component interface, while ArmorDecorator and CloakDecorator are concrete decorators.`
+- `Decorators add specific functionalities (equipping armor, cloak) to the basic hero.`
+#### Command Pattern:
+- `Employed the Command pattern for handling player commands in the game.`
+- `Command is the command interface, and MoveCommand and AttackCommand are concrete command implementations.`
+- `InputHandler acts as the invoker, allowing the player to choose and execute commands.`
+#### Singleton Pattern:
+- `Implemented the Singleton pattern for the PaymentManager class.`
+- `Ensures a single instance of the PaymentManager is created and provides a global point of access to it.`
+#### Factory Pattern: 
+- `Implemented the Factory Design Pattern for creating different types of game patches.`
+- `Introduces a GamePatchFactory interface and a concrete implementation, ConcreteGamePatchFactory, that centralizes the creation of game patches.`
+- `Concrete classes like CataclysmPatch and InvokePatch implement the GamePatch interface and are created by the factory based on the specified type.`
+### Project Outcomes. Challanges faced.
+Successfully implemented a modular and extensible WoW game in Java, incorporating key design patterns such as Factory, Adapter, Observer, Decorator, Command, and Singleton.
+Achieved a well-organized code structure that enhances maintainability and flexibility, allowing for the addition of new features or modifications without major code changes. Adapting to and implementing multiple design patterns posed a challenge in terms of understanding the intricate interactions between different pattern implementations. Ensuring seamless integration between various components while maintaining the overall cohesion of the system required careful consideration of design choices. Debugging and resolving issues related to the adaptation of the WoW player to different sides (neutral, dire) in the Adapter pattern presented a specific challenge.
+### Future improvements.
+Future improvements could focus on improving the user interface and interaction within the command-line interface (CLI), providing a more intuitive and engaging experience for players. ntroducing additional game features, quests, or character customization options could enhance gameplay depth and provide players with more diverse and immersive experiences in the WoW game. Implementing a data storage solution, such as a database, would allow for the persistence of player progress, achievements, and in-game data, enabling a more comprehensive and personalized gaming experience.
