@@ -1,0 +1,3 @@
+interface Hero {
+    void equip();
+}

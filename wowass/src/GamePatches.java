@@ -1,0 +1,3 @@
+interface GamePatches {
+    void applyPatch();
+}
