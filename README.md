@@ -268,7 +268,6 @@ interface Command {
 class AttackCommand implements Command {
     @Override
     public void execute() {
-        // Logic for player attacking
         System.out.println("Player attacking");
     }
 }
@@ -293,7 +292,6 @@ class MoveCommand implements Command {
 
     @Override
     public void execute() {
-        // Logic for moving the player in the specified direction
         System.out.println("Moving player " + direction);
     }
 }
